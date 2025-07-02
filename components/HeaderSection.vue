@@ -10,18 +10,18 @@
           </button>
         </div>
 
-        <transition name="slide">
-          <div v-if="isToggleProfile" class="profile-icon-area">
+       
+          <div class="profile-icon-area">
             <div class="profile-icon-item">
-              <div>
+              <div class="slide-up">
                 <img src="/public/assets/images/icons/github.svg" alt="">
               </div>
-              <div>
+              <div class="slide-down">
                 <img src="/public/assets/images/icons/google.svg" alt="">
               </div>
             </div>
           </div>
-        </transition>
+      
 
       </div>
     </div>
@@ -132,6 +132,24 @@ const handleToggleProfile = () => {
 
 .slide-up {
   animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 
