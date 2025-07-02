@@ -2,7 +2,7 @@
   <div class="header-wrapper">
     <div class="container">
       <div class="header-text-area">
-        <h2>PORTFOLIO</h2>
+        <h2><span class="slide-left">PORT</span><span class="slide-right">FOLIO</span></h2>
         <h3>PHUWAKORN KAIYASUAN</h3>
         <div class="header-button-area">
           <button class="btn-header" @click="handleToggleProfile">
@@ -60,12 +60,20 @@ const handleToggleProfile = () => {
   position: relative;
 }
 
+.slide-left,
+.slide-right {
+  display: inline-block;
+  animation-fill-mode: forwards;
+}
+
 .header-text-area {
   text-align: center;
   color: #fff;
   h2 {
     font-size: 50px;
     font-weight: bold;
+    display: flex;
+  justify-content: center;
   }
 }
 .header-button-area {
@@ -130,8 +138,35 @@ const handleToggleProfile = () => {
   animation: slideDown 0.3s ease forwards;
 }
 
+.slide-left {
+  animation: slideLeft 0.6s ease forwards;
+}
+
+.slide-right {
+  animation: slideRight 0.3s ease forwards;
+}
+
 .slide-up {
-  animation: slideUp 0.3s ease forwards;
+  animation: slideUp 0.6s ease forwards;
+}
+
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 
 @keyframes slideDown {
