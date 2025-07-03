@@ -43,7 +43,7 @@
         style="position: absolute; right: 20px; bottom: 20px"
         @click=""
       >
-        <span class="front" style="background-color: red; color: #fff">
+        <span class="front" style="background-color: #323232; color: #fff">
           HIRE ME!
         </span>
       </button>
@@ -162,6 +162,7 @@ input, textarea {
   border: 4px solid #000;
   padding: 20px;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .header-wrapper {
   font-family: Quicksand;
