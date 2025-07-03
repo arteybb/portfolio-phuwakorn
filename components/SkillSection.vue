@@ -94,7 +94,7 @@ onMounted(() => {
       ease: 'power2.out',
       scrollTrigger: {
         trigger: boxRight.value,
-        start: 'top 60%',
+        start: 'top 80%',
         toggleActions: 'play none none none',
       }
     })
