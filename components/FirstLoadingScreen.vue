@@ -6,7 +6,7 @@
           <div class="loader" />
           <p class="text">Fetching profile...</p>
         </div>
-        <p class="subtext"><b style="color:#e60012;">Warning:</b> Contains dangerously cool frontend skills.</p>
+        <p class="subtext"><b style="background-color: #e60012;padding:10px;color:#fff;">Warning:</b> Contains dangerously cool frontend skills.</p>
       </div>
     </div>
   </div>
@@ -16,6 +16,7 @@
 <style scoped>
 .loading-wrapper {
   background-color: #e60012;
+  position: relative;
 }
 
 .loading-inner {
@@ -61,9 +62,10 @@
 
 .subtext {
   font-size: 16px;
-  
+  position: absolute;
   margin-top: 8px;
   color: #333;
+  bottom: 40px;
 }
 
 @keyframes spin {
