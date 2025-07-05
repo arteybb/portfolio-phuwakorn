@@ -84,7 +84,7 @@
 </template>
 
 <script setup lang="ts">
-const isToggleProfile = ref<boolean>(false);
+const isToggleProfile = ref<boolean>(false)
 const handleToggleProfile = () => {
   isToggleProfile.value = !isToggleProfile.value;
 };

@@ -2,10 +2,10 @@
   
    <div>
     <HamburgerMenu />
-  <HeaderSection />
-  <SkillSection />
-  <ExperienceSection />
- 
+    <HeaderSection />
+    <SkillSection />
+    <ExperienceSection />
+    <!-- <WorkSection /> -->
 
 
 

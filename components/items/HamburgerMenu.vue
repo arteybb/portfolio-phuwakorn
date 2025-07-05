@@ -1,33 +1,32 @@
 <template>
   <div class="menu" @click="handleMenuToggle">
     <div v-if="!isToggleMenu" class="menu-icon">
-    <div class="menu-icon-inner">
-      <div />
-      <div />
+      <div class="menu-icon-inner">
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>
+    </div>
+
+    <div v-if="isToggleMenu" class="close-icon">
       <div />
       <div />
     </div>
   </div>
-
-  <div v-if="isToggleMenu" class="close-icon">
-    
-      <div />
-      <div />
-   
-  </div>
-  </div>
 </template>
 
 <script setup lang="ts">
-  const isToggleMenu = ref<boolean>(false)
+const isToggleMenu = ref<boolean>(false);
 
-  const handleMenuToggle = () => {
-    isToggleMenu.value = !isToggleMenu.value
-  }
+const handleMenuToggle = () => {
+  isToggleMenu.value = !isToggleMenu.value;
+};
 </script>
 
 <style scoped>
-.menu-icon,.close-icon {
+.menu-icon,
+.close-icon {
   position: fixed;
   z-index: 9999;
   top: 15px;
@@ -37,37 +36,33 @@
   width: 80px;
   height: 70px;
 }
-.menu-icon{
+.menu-icon {
   animation: pop 0.3s ease;
 }
-.close-icon{
-  left:8px;
-  top:10px;
+.close-icon {
+  left: 8px;
+  top: 10px;
   animation: pop 0.3s ease;
 }
 
-.close-icon{
-  
-  div:nth-child(1){
+.close-icon {
+  div:nth-child(1) {
     background-color: #fff;
     border-radius: 30px;
-    height:10px;
+    height: 10px;
     rotate: 45deg;
     position: relative;
-    top:30px;
-    
+    top: 30px;
   }
-  div:nth-child(2){
+  div:nth-child(2) {
     background-color: #fff;
     border-radius: 30px;
-    height:10px;
+    height: 10px;
     rotate: -45deg;
     position: relative;
-    top:20px;
-    
+    top: 20px;
   }
 }
-
 
 .menu-icon-inner {
   position: relative;
@@ -105,12 +100,11 @@
   left: 30px;
 }
 
-
-@keyframes pop{
-  from{
+@keyframes pop {
+  from {
     transform: scale(0);
   }
-  to{
+  to {
     transform: scale(0.6);
   }
 }
